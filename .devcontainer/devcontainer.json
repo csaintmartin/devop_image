@@ -1,0 +1,67 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/alpine
+{
+	"name": "Python app",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+    "image": "devops_base:latest",
+    //"build": {
+    //    "dockerfile": "Dockerfile",
+    //    "context": "..",
+    //},
+    //"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "terminal.integrated.profiles.linux": {
+                    "bash (container default)": {
+                        "path": "/bin/bash",
+                        "overrideName": true
+                    }
+                },
+                // "terminal.integrated.fontFamily": "'Hack NF'",
+                "editor.fontFamily": "'DejaVu Sans Mono for Powerline'",
+                // "python.languageServer": "Pylance",
+                // "[python]": {
+                //     "editor.defaultFormatter": "ms-python.black-formatter",
+                //     "editor.formatOnSave": true
+                // }
+            },
+            "extensions": [
+                "ms-python.python",
+                "GitHub.copilot",
+                "GitHub.copilot-chat",
+                "GitHub.copilot-labs",
+                "ms-python.black-formatter",
+                "ms-python.isort",
+                "PKief.material-icon-theme",
+                "ms-toolsai.jupyter",
+                "ms-python.pylint",
+                "mhutchie.git-graph",
+                "codeium.codeium"
+            ]
+        }
+    },
+    "postCreateCommand": "/bin/bash /tmp/postCreateCommand.sh",
+	//"features": {
+	//	"ghcr.io/devcontainers-extra/features/bash-command:1": {
+	//		"version": "latest"
+	//	},
+	//	"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+	//}
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "uname -a",
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	//"remoteUser": "vscode", //"root"
+}

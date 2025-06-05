@@ -1,0 +1,28 @@
+name: devops
+channels:
+  - numba
+  - conda-forge
+  - plotly
+dependencies:
+  - python=3.11
+  - pip
+  - ipython
+  - pre-commit
+  - pytest 
+  - dask
+  - dash
+  - pycaret
+  - pandas
+  - scipy
+  - jupyter
+  - jupyter-book
+  - ipywidgets=8
+  - numpy
+  - matplotlib
+  - tqdm
+  - scikit-image
+  - scikit-learn
+  - seaborn
+  - fast-histogram
+  - pytorch
+  - tensorflow
